@@ -15,6 +15,9 @@
 
         <telegrambots.version>6.9.7.1</telegrambots.version>
         <discord4j.version>3.2.6</discord4j.version>
+        <io.netty.version>4.1.110.Final</io.netty.version>
+        <io.projectreactor.netty.version>1.1.17</io.projectreactor.netty.version>
+        <commons-codec.version>1.15</commons-codec.version>
     </properties>
 
     <dependencies>
@@ -37,38 +40,38 @@
                 <groupId>org.telegram</groupId>
                 <artifactId>telegrambots</artifactId>
                 <version>${telegrambots.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>commons-codec</groupId>
-                        <artifactId>commons-codec</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
-
             <dependency>
                 <groupId>com.discord4j</groupId>
                 <artifactId>discord4j-core</artifactId>
                 <version>${discord4j.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>io.netty</groupId>
-                        <artifactId>netty-codec-http2</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>io.netty</groupId>
-                        <artifactId>netty-codec-http</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>io.netty</groupId>
-                        <artifactId>netty-handler</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>io.projectreactor.netty</groupId>
-                        <artifactId>reactor-netty-http</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
 
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>${commons-codec.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-codec-http2</artifactId>
+                <version>${io.netty.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-codec-http</artifactId>
+                <version>${io.netty.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-handler</artifactId>
+                <version>${io.netty.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.projectreactor.netty</groupId>
+                <artifactId>reactor-netty-http</artifactId>
+                <version>${io.projectreactor.netty.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
