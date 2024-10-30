@@ -18,6 +18,7 @@
         <io.netty.version>4.1.110.Final</io.netty.version>
         <io.projectreactor.netty.version>1.1.17</io.projectreactor.netty.version>
         <commons-codec.version>1.15</commons-codec.version>
+        <junit.version>4.13.1</junit.version>
     </properties>
 
     <dependencies>
@@ -31,6 +32,10 @@
         <dependency>
             <groupId>com.discord4j</groupId>
             <artifactId>discord4j-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
         </dependency>
     </dependencies>
 
@@ -46,7 +51,6 @@
                 <artifactId>discord4j-core</artifactId>
                 <version>${discord4j.version}</version>
             </dependency>
-
             <dependency>
                 <groupId>commons-codec</groupId>
                 <artifactId>commons-codec</artifactId>
@@ -54,7 +58,7 @@
             </dependency>
             <dependency>
                 <groupId>io.netty</groupId>
-                <artifactId>netty-codec-http2</artifactId>
+                <artifactId>netty-all</artifactId>
                 <version>${io.netty.version}</version>
             </dependency>
             <dependency>
@@ -63,14 +67,15 @@
                 <version>${io.netty.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty-handler</artifactId>
-                <version>${io.netty.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>io.projectreactor.netty</groupId>
                 <artifactId>reactor-netty-http</artifactId>
                 <version>${io.projectreactor.netty.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
